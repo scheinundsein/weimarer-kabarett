@@ -1,0 +1,4 @@
+name: Termine
+icon: calendar
+fields:
+  text: fields/markdown

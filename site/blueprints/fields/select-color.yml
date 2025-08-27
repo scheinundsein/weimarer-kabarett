@@ -1,0 +1,7 @@
+type: select
+label: Farbe
+options:
+  red: Rot
+  blue: Blau
+  yellow: Gelb
+default: red

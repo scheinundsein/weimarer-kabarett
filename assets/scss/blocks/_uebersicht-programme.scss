@@ -1,0 +1,36 @@
+.content-block.programm-uebersicht {
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .subline {
+        @include subline;
+    }
+}
+
+.programm-uebersicht__item:not(:last-child) {
+    padding-bottom: rem(120);
+    background-repeat: no-repeat;
+    background-size: rem(50);
+    background-position: center bottom;
+    background-image: url('../images/bildmarke-weimarer-kabarett-weiss.svg');
+}
+
+.programm-uebersicht__item+.programm-uebersicht__item {
+    margin-top: rem(120);
+
+    @include mobile {
+        margin-top: rem(60);
+    }
+}
+
+.programm-uebersicht__item-termine {
+    ul {
+        @include content-list;
+        margin-bottom: 2em;
+    }
+
+    .button {
+        margin-bottom: .25em;
+    }
+}

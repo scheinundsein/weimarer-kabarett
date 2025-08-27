@@ -1,0 +1,52 @@
+.content-block.anfahrt {
+    position: relative;
+
+    >a,
+    &::before {
+        width: 50vw;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include from($tablet) {
+            width: 60vw;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: rem(400);
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    &::before {
+        content: '';
+        background-image: url('../images/karte-anfahrt.svg');
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+
+        @include from($tablet) {
+            width: 60vw;
+        }
+
+        @include mobile {
+            background-position: center;
+        }
+    }
+}
+
+.anfahrt__text {
+    padding: rem(60) 2rem rem(460) 2rem;
+
+    @include from($tablet) {
+        padding: rem(100) 2rem;
+        margin-left: calc(60vw + 1.5rem);
+
+        .button {
+            margin-top: rem(100) !important;
+        }
+    }
+}

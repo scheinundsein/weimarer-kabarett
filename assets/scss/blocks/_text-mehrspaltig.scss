@@ -1,0 +1,25 @@
+.content-block.text-mehrspaltig {
+    h2:only-child {
+        margin-top: -.1em;
+    }
+
+    h3 {
+        @include h4;
+    }
+
+    ul {
+        @include content-list;
+    }
+
+    .column.is-6 {
+        margin-top: 1.5rem;
+    }
+
+    a.social-icon {
+        margin-left: 0;
+        margin-right: 1.5em;
+        margin-top: 1em;
+        width: rem(35);
+        height: rem(35);
+    }
+}

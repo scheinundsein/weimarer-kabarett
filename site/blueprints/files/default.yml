@@ -1,0 +1,12 @@
+title: File
+sections:
+  fields:
+    type: fields
+    fields:
+      alt:
+        type: text
+        label: Alternativtext
+      title:
+        type: markdown
+        label: Titel
+        buttons: false

@@ -1,0 +1,25 @@
+title: Neuigkeit
+
+tabs:
+  content:
+    label: Inhalt
+    icon: text
+    fields:
+      published:
+        type: date
+        label: Datum
+        display: DD.MM.YY
+        width: 1/2
+        default: today
+        required: true
+      img:
+        type: files
+        multiple: false
+        label: Bild
+        required: true
+        width: 1/2
+      teasertext:
+        extends: fields/markdown
+        label: Kurztext
+      text:
+        extends: fields/markdown

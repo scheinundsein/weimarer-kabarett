@@ -1,0 +1,45 @@
+.content-block {
+    padding: rem(60) 0;
+
+    @include from($tablet) {
+        padding: rem(80) 0;
+    }
+
+    @include from($desktop) {
+        padding: rem(120) 0;
+    }
+
+    p:last-child>a.button:only-child {
+        margin-top: 2em;
+    }
+
+    &.has-bg-blue,
+    &.has-bg-red {
+
+        h2,
+        h3,
+        h4 {
+            color: $white !important;
+        }
+
+        a.button {
+            @include button-primary-inverted;
+        }
+
+        a:not(.button):not(.button-circle):not(.button-light) {
+            @include text-link-white;
+        }
+    }
+
+    &.has-bg-white {
+        a:not(.button):not(.button-circle):not(.button-light) {
+            @include text-link($yellow);
+        }
+    }
+
+    &.has-bg-yellow {
+        a:not(.button):not(.button-circle):not(.button-light) {
+            @include text-link($blue);
+        }
+    }
+}

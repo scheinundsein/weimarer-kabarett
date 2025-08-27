@@ -1,0 +1,128 @@
+.content-block.hero {
+    position: relative;
+    overflow: hidden;
+
+    &:not(.is-splitscreen).has-bg-red {
+        .hero__text-inner {
+            background: $red;
+        }
+    }
+
+    &:not(.is-splitscreen).has-bg-blue {
+        .hero__text-inner {
+            background: $blue;
+        }
+    }
+
+    ul {
+        @include arrow-list;
+    }
+
+    @include from($tablet) {
+        height: calc(100vh - 40px);
+
+        &.is-splitscreen {
+            .hero__img {
+                width: 50vw;
+            }
+        }
+
+        &:not(.is-splitscreen) {
+            .hero__text-inner {
+                padding: calc(100%/12);
+            }
+        }
+    }
+}
+
+.hero__img {
+    height: 100%;
+
+    img,
+    video {
+        @include objfit-cover;
+    }
+
+    @include mobile {
+        height: rem(250);
+    }
+}
+
+
+.hero__text {
+    position: relative;
+
+    @include mobile {
+        padding: rem(60) 2rem;
+
+    }
+
+    @include from($tablet) {
+        @include center-xy;
+    }
+}
+
+.template-home {
+    .content-block.hero {
+        background: $white;
+    }
+
+    .hero__text {
+        @include mobile {
+            padding: rem(100) 2rem;
+        }
+    }
+
+    .hero__img {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba($red, .75);
+        }
+
+        @include mobile {
+            position: absolute;
+            width: 100%;
+            height: calc(100% - rem(250));
+            z-index: 0;
+        }
+
+
+        @include from($tablet) {
+            margin-left: 50vw;
+        }
+    }
+
+
+}
+
+.hero__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+        height: rem(250);
+
+        img {
+            max-width: rem(300);
+            width: 80%;
+        }
+    }
+
+
+    @include from($tablet) {
+        position: absolute;
+        width: 50vw;
+        height: 100%;
+
+
+        img {
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+name: Newsletter Anmeldung
+icon: email
+fields:
+  text: fields/markdown

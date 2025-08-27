@@ -1,0 +1,102 @@
+.news-items {
+    justify-content: center;
+
+    @include from($desktop) {
+        justify-content: space-between;
+    }
+}
+
+.news-item {
+    margin: rem(30) 0;
+
+    @include mobile {
+        margin: rem(10) 0;
+    }
+
+    @include until($desktop) {
+        &:nth-child(n+3) {
+            display: none;
+        }
+    }
+
+    @include until(600px) {
+        width: 100% !important;
+    }
+}
+
+.news-item__inner {
+    position: relative;
+    height: 100%;
+    padding-bottom: 25%;
+
+
+
+    @include mobile {
+        padding-bottom: 50%;
+    }
+
+
+    @include from($desktop) {
+        &:hover {
+            .news-item__text::before {
+                transform: rotate(-15deg);
+            }
+        }
+    }
+}
+
+.news-item__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    aspect-ratio: 1/1;
+    padding: 0 10% 5% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include until(375px) {
+        width: 100% !important
+    }
+
+    @include mobile {
+        padding: 0 5% 5% 5%;
+
+        a.button {
+            margin-top: 1em !important;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/form-halbkreis-gelb.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+        z-index: 0;
+
+
+        @include from($desktop) {
+            transition: transform .3s cubic-bezier(.47, 1.64, .41, .8);
+        }
+    }
+
+    * {
+        position: relative;
+        z-index: 1;
+    }
+
+    h3 {
+        margin-top: .25em;
+        margin-bottom: 0;
+    }
+
+    h3 a {
+        color: $black;
+    }
+}

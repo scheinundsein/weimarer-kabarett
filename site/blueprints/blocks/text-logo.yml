@@ -1,0 +1,11 @@
+name: Text + Logo
+icon: text
+fields:
+  text: fields/markdown
+  bgcolor:
+    extends: fields/select-color
+    width: 1/2
+  blockid:
+    type: text
+    label: Block ID
+    width: 1/2

@@ -1,0 +1,27 @@
+title: Whatsapp Broadcast
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+
+  content:
+    label: Inhalt
+    icon: text
+    sections:
+      fields:
+        type: fields
+        fields:
+
+          text: fields/markdown
+          textsuccess:
+            extends: fields/markdown
+            label: Text nach Absenden des Formulars
+
+
+
+
+  media: tabs/media
+
+  seo: tabs/seo

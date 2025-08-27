@@ -1,0 +1,6 @@
+name: News
+icon: alert
+fields:
+  headline:
+    extends: fields/markdown
+    label: Überschrift

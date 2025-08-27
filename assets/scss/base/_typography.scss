@@ -1,0 +1,167 @@
+body {
+    font-family: $font-primary;
+    font-size: rem(16);
+    color: $black;
+    line-height: 1.4;
+}
+
+
+@mixin h1 {
+    @include fluid-type(600px, 1300px, 36px, 48px);
+    font-family: $font-secondary;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    line-height: 1.2;
+    @include tracking(20);
+}
+
+
+@mixin h2 {
+    @include fluid-type(600px, 1300px, 32px, 42px);
+    font-family: $font-secondary;
+    font-weight: 400;
+    margin-bottom: .5em;
+    line-height: 1.2;
+    @include tracking(20);
+}
+
+@mixin h3 {
+    @include fluid-type(600px, 1300px, 24px, 32px);
+    font-family: $font-secondary;
+    font-weight: 400;
+    margin-bottom: .75em;
+    line-height: 1.3;
+    @include tracking(20);
+}
+
+@mixin h4 {
+    @include fluid-type(600px, 1300px, 21px, 24px);
+    font-family: $font-secondary;
+    font-weight: 400;
+    margin-bottom: .75em;
+    line-height: 1.3;
+    @include tracking(20);
+    color: $blue;
+}
+
+@mixin paragraph {
+    @include fluid-type(320px, 1300px, 16px, 18px);
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+@mixin subline {
+    font-weight: 800;
+    color: $blue;
+    margin-top: .5em;
+}
+
+@mixin content-list {
+    ul {
+        list-style: none;
+    }
+
+    li {
+        @include paragraph;
+        position: relative;
+        padding-left: 1em;
+    }
+
+    li+li {
+        margin-top: .25em;
+    }
+
+    li::before {
+        content: "\2022";
+        color: $red;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: -1px
+    }
+}
+
+@mixin arrow-list {
+    ul {
+        list-style: none;
+    }
+
+    li {
+        @include paragraph;
+        line-height: 1.5;
+        position: relative;
+        padding-left: 1.5em;
+    }
+
+    li+li {
+        margin-top: .5em;
+    }
+
+    li::before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: 0;
+        top: .2em;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 13'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23FD0' d='M6.5 0A6.5 6.5 0 1 0 13 6.5 6.507 6.507 0 0 0 6.5 0Zm2.354 7.354-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L6 7.793V4a.5.5 0 1 1 1 0v3.793l1.146-1.147a.5.5 0 1 1 .708.708Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h13v13H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+p {
+    @include paragraph;
+}
+
+strong {
+    font-weight: 800;
+}
+
+.has-text-white strong {
+    color: $white;
+}
+
+small {
+    font-size: rem(14);
+}
+
+blockquote p {
+    @include fluid-type(600px, 1300px, 21px, 24px);
+    @include tracking(20);
+    font-family: $font-secondary;
+    font-weight: 400;
+    margin-top: 2em;
+
+    em {
+        display: block;
+        text-align: right;
+        font-style: normal;
+        margin-top: 1em;
+        @include paragraph;
+        @include tracking(0);
+    }
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3,
+.is-h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
+
+p+p,
+p+h3 {
+    margin-top: 1.5em;
+}

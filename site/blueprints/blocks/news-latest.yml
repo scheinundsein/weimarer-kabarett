@@ -1,0 +1,8 @@
+name: Neuigkeit einzeln
+icon: alert
+fields:
+  headline:
+    extends: fields/markdown
+    label: Überschrift
+  bgcolor:
+    extends: fields/select-color

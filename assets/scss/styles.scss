@@ -1,0 +1,37 @@
+@import "vendor/bulma-scss/bulma";
+@import "vendor/magnific-popup";
+
+@import "base/variables";
+@import "base/fonts";
+@import "base/functions";
+@import "base/mixins";
+@import "base/typography";
+@import "base/links-and-buttons";
+
+@import "layout/global";
+@import "layout/header";
+@import "layout/menu";
+@import "layout/footer";
+
+@import "components/lightbox";
+@import "components/form";
+
+@import "blocks/all";
+@import "blocks/hero";
+@import "blocks/teaser-programme";
+@import "blocks/news";
+@import "blocks/anfahrt";
+@import "blocks/text-logo";
+@import "blocks/news-latest";
+@import "blocks/uebersicht-programme";
+@import "blocks/termine";
+@import "blocks/text";
+@import "blocks/text-mehrspaltig";
+@import "blocks/text-img";
+
+
+@import "pages/ueber-uns";
+@import "pages/programm";
+@import "pages/kontakt-service";
+@import "pages/news";
+@import "pages/whatsapp-broadcast";

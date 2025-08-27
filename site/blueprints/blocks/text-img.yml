@@ -1,0 +1,31 @@
+name: Text + Bild(er)
+icon: text
+preview: fields
+fields:
+  img:
+    type: files
+    label: Bild(er)
+  text: fields/markdown
+  bgcolor:
+    extends: fields/select-color
+    width: 1/2
+  alignment:
+    type: select
+    label: Anordnung
+    default: left
+    options:
+      left: Bild links, Text rechts
+      right: Bild rechts, Text links
+    width: 1/2
+  vcentered:
+    type: toggle
+    label: Vertikal zentrieren?
+    width: 1/3
+  class:
+    type: text
+    label: CSS Klasse
+    width: 1/3
+  blockid:
+    type: text
+    label: Block ID
+    width: 1/3

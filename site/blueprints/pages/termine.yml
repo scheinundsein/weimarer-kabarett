@@ -1,0 +1,68 @@
+title: Termine
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+
+  content:
+    label: Inhalt
+    icon: text
+    sections:
+      fields:
+        type: fields
+        fields:
+          dates:
+            type: structure
+            label: Weitere Termine
+            fields:
+              title:
+                type: textarea
+                label: Titel
+              datum:
+                type: date
+                label: Datum
+                display: DD.MM.YYYY
+                width: 1/3
+              wochentag:
+                type: text
+                label: Wochentag
+                width: 1/3
+              uhrzeit:
+                type: text
+                label: Uhrzeit
+                width: 1/3
+              location:
+                type: text
+                label: Spielstätte
+              ticketlink:
+                type: text
+                label: Ticketlink
+              img:
+                type: files
+                multiple: false
+                label: Bild
+              ausverkauft:
+                type: toggle
+                label Ausverkauft
+              restkarten:
+                type: toggle
+                label Restkarten verfügbar
+              gastspiel:
+                type: toggle
+                label Auswärts
+
+          blocks:
+            type: blocks
+            label: Inhaltslemente
+            fieldsets:
+              - hero-area
+              - termine
+              - text-mehrspaltig
+
+
+
+  media: tabs/media
+
+  seo: tabs/seo

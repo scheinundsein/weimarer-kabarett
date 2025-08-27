@@ -1,0 +1,20 @@
+name: Text mehrspaltig
+icon: text
+fields:
+  headline:
+    extends: fields/markdown
+    label: Überschrift
+  textblocks:
+    type: structure
+    label: Textblöcke
+    max: 4
+    help: maximal 4
+    fields:
+      text: fields/markdown
+  bgcolor:
+    extends: fields/select-color
+    width: 1/2
+  blockid:
+    type: text
+    label: Block ID
+    width: 1/2

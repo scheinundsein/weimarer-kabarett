@@ -1,0 +1,23 @@
+type: markdown
+label: Text
+font: sans-serif
+buttons:
+  headlines:
+    - h1
+    - h2
+    - h3
+    - h4
+    - h5
+    - h6
+  bold: ** # or `__`
+  link: null # or `markdown` or `kirbytext`
+  pagelink: null # or `markdown` or `kirbytext`
+  email: null
+  italic: * # or `_`
+  ul: - # or `*`/`+`
+  link:
+    blank: true # Show option for opening link in a new tab.
+  - blockquote
+  hr: *** # or `---`/`___`
+  - pagelink
+  - file

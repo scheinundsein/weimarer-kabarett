@@ -1,0 +1,16 @@
+name: Kopfbereich
+icon: grid-top
+fields:
+  bg:
+    type: files
+    label: Bild oder Video
+    multiple: false
+    required: true
+
+  text: fields/markdown
+
+  bgcolor: fields/select-color
+
+  splitscreen:
+    type: toggle
+    label: Zweigeteiltes Layout

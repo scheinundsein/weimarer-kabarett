@@ -1,0 +1,48 @@
+.page-ueber-uns {
+    .content-block.text-img {
+
+        &.has-bg-white .container {
+            background-image: url('../images/form-halbkreis-rot.svg');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: rem(120);
+            padding-bottom: rem(110);
+
+            @include from($tablet) {
+                background-size: rem(250);
+                padding-bottom: rem(200);
+            }
+
+            @include from($desktop) {
+                background-position: left 1rem bottom;
+                background-size: calc(100%/12*4);
+                padding-bottom: 0;
+
+                .column:last-child {
+                    width: calc(100%/12*4);
+                    margin-left: calc(100%/12);
+                }
+            }
+        }
+
+        &.has-bg-blue .text-img__text,
+        &.has-bg-red .text-img__text {
+            padding-bottom: rem(150);
+            background-repeat: no-repeat;
+            background-size: rem(100);
+            background-position: left bottom;
+
+            @include mobile {
+                background-position: center bottom;
+            }
+        }
+
+        &.has-bg-blue .text-img__text {
+            background-image: url('../images/bildmarke-weimarer-kabarett-gelb.svg');
+        }
+
+        &.has-bg-red .text-img__text {
+            background-image: url('../images/bildmarke-weimarer-kabarett-blau.svg');
+        }
+    }
+}

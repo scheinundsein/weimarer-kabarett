@@ -1,0 +1,100 @@
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    padding-top: rem(40);
+}
+
+.container {
+    width: 100%;
+    max-width: calc(1200px + 4rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @include until(375px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+img,
+video {
+    @include fluid-image;
+}
+
+.mt-mobile {
+    @include mobile {
+        margin-top: 1rem;
+    }
+}
+
+.pb-0-mobile {
+    @include mobile {
+        padding-bottom: 0;
+    }
+}
+
+.has-text-red {
+    color: $red;
+}
+
+.has-bg-red {
+    background: $red;
+    @extend .has-text-white;
+}
+
+.has-bg-blue {
+    background: $blue;
+    @extend .has-text-white;
+}
+
+.has-bg-yellow {
+    background: $yellow;
+}
+
+
+.social-icon {
+    width: rem(30);
+    height: rem(30);
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 1rem;
+    transition: transform 1s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &.instagram {
+        background-image: url('../images/icon-instagram.svg');
+    }
+
+    &.facebook {
+        background-image: url('../images/icon-facebook.svg');
+    }
+
+    &.youtube {
+        background-image: url('../images/icon-youtube.svg');
+    }
+}
+
+.has-bg-blue,
+.has-bg-red {
+    .social-icon.instagram {
+        background-image: url('../images/icon-instagram-white.svg');
+    }
+
+    .social-icon.facebook {
+        background-image: url('../images/icon-facebook-white.svg');
+    }
+
+    .social-icon.youtube {
+        background-image: url('../images/icon-youtube-white.svg');
+    }
+}

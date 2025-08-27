@@ -1,0 +1,29 @@
+title: Startseite
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+
+  content:
+    label: Inhalt
+    icon: text
+    sections:
+      fields:
+        type: fields
+        fields:
+          blocks:
+            type: blocks
+            label: Inhaltslemente
+            fieldsets:
+              - hero-area
+              - teaser-programme
+              - text-img
+              - news
+              - newsletter
+              - anfahrt
+
+  media: tabs/media
+  seo: tabs/seo
+

@@ -1,0 +1,20 @@
+title: Neugkeiten
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+
+  content:
+    label: Inhalt
+    icon: text
+    sections:
+      pages:
+        type: pages
+        label: News
+        template: news-single
+
+  media: tabs/media
+
+  seo: tabs/seo

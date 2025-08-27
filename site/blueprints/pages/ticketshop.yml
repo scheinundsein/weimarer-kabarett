@@ -1,0 +1,33 @@
+title: Ticketshop
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+
+  # content:
+  #   label: Inhalt
+  #   icon: text
+  #   sections:
+  #     fields:
+  #       type: fields
+  #       fields:
+  #         blocks:
+  #           type: blocks
+  #           label: Inhaltslemente
+  #           fieldsets:
+  #             - hero-area
+  #             - text
+  #             - text-img
+  #             - text-logo
+  #             - text-mehrspaltig
+  #             - news
+  #             - news-latest
+  #             - newsletter
+  #             - anfahrt
+  #             - teaser-programme
+
+  # media: tabs/media
+  seo: tabs/seo
+

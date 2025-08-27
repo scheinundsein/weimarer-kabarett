@@ -1,0 +1,9 @@
+label: SEO
+icon: search
+fields:
+  seotitle:
+    label: Seitentitel
+    type: text
+  seodesc:
+    label: Meta-Description
+    type: textarea

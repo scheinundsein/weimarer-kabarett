@@ -1,0 +1,6 @@
+label: Medien
+icon: image
+sections:
+  media:
+    type: files
+    label: Dateien

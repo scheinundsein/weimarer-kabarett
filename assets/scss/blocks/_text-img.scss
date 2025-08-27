@@ -1,0 +1,16 @@
+.content-block.text-img {
+    .is-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        a {
+            display: block;
+            width: calc(50% - .5rem);
+
+            &:nth-child(n+3) {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

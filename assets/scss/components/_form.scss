@@ -1,0 +1,35 @@
+#email {
+    position: absolute;
+    margin-left: -9999px;
+}
+
+.label {
+    @include h4;
+}
+
+label.checkbox {
+    position: relative;
+    padding-left: 1.5rem;
+
+    input {
+        position: absolute;
+        left: 0;
+        top: .2em;
+    }
+
+    a {
+        @include text-link($blue);
+    }
+}
+
+input.button {
+    all: unset;
+    display: inline-block;
+    @include button-primary;
+    padding: .75em 2em;
+    cursor: pointer;
+
+    &::before {
+        display: none;
+    }
+}

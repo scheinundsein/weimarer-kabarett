@@ -1,0 +1,82 @@
+title: Programm
+
+tabs:
+  content:
+    label: Content
+    icon: text
+    fields:
+      Teaserimg:
+        type: files
+        multiple: false
+        label: Plakat/Coverbild
+      subline:
+        type: text
+        label: Untertitel
+      teasertext:
+        extends: fields/markdown
+        label: Kurztext
+        buttons: false
+
+      intro:
+        label: Intro
+        extends: fields/markdown
+
+      text: fields/markdown
+
+      credits:
+        label: Credits
+        extends: fields/markdown
+
+
+      dates:
+        type: structure
+        label: Termine
+        fields:
+          datum:
+            type: date
+            label: Datum
+            display: DD.MM.YYYY
+            width: 1/3
+          wochentag:
+            type: text
+            label: Wochentag
+            width: 1/3
+          uhrzeit:
+            type: text
+            label: Uhrzeit
+            width: 1/3
+          location:
+            type: text
+            label: Spielstätte
+          ticketlink:
+            type: text
+            label: Ticketlink
+          ausverkauft:
+            type: toggle
+            label Ausverkauft
+          restkarten:
+                type: toggle
+                label Restkarten verfügbar
+          gastspiel:
+            type: toggle
+            label Auswärts
+
+      galerie:
+        type: files
+        label: Galerie
+
+      downloads:
+        type: structure
+        label: Downloads
+        fields:
+          # img:
+          #   type: files
+          #   multiple: false
+          #   label: Bild
+          text:
+            type: textarea
+            label: Text
+          file:
+            type: files
+            multiple: false
+            label: Datei

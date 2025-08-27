@@ -1,0 +1,4 @@
+name: Vorschau Programme
+icon: layers
+fields:
+  text: fields/markdown

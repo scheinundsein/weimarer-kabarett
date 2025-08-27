@@ -1,0 +1,4 @@
+name: Programme
+icon: layers
+fields:
+  text: fields/markdown

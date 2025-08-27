@@ -1,0 +1,27 @@
+.page-kontakt-und-service {
+    .anfahrt__text {
+        @include from($tablet) {
+            padding-top: rem(80);
+        }
+    }
+}
+
+.text-mehrspaltig#kontakt {
+    .column:first-child p {
+        @include h3;
+        line-height: 1.5;
+        margin-bottom: .5em;
+    }
+
+    .button {
+        margin: 1em 0 0 0 !important;
+    }
+
+    @include mobile {
+        //padding-bottom: 0;
+
+        h2 {
+            text-align: left;
+        }
+    }
+}
