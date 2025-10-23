@@ -13,15 +13,24 @@ $json = [];
 
 foreach($termine as $termin) {
 	// if ($termin->ausverkauft()->toBool() === false) {
+
+		if ($termin->parent()->slug() == 'termine-und-tickets') {
+	  	$programm = (string)$termin->title();
+		  $programmlink = null;
+	  } else {
+	  	$programm = (string)$termin->parent()->title();
+		  $programmlink = (string)$termin->parent()->url();
+	  }
+
 	  $json[] = array(
 	    'datum'  => (string)$termin->datum(),
 	    'wochentag'  => (string)$termin->wochentag(),
 	    'uhrzeit'  => (string)$termin->uhrzeit(),
 	    'location'  => (string)$termin->location(),
 	    'ticketlink'  => (string)$termin->ticketlink(),
-	    'programm'  => (string)$termin->parent()->title(),
-	    'programmlink'  => (string)$termin->parent()->url(),
 	    'ausverkauft' => (string)$termin->ausverkauft()->toBool(),
+	    'programm'  => $programm,
+		  'programmlink'  => $programmlink
 	  );
 	// }
 }
